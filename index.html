@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Robins funny quiz for iths</title>
+    <meta name="description" content="Funny quiz">
+    <meta name="author" content="Robin-iths">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div id="title">
+            <h1>Quizmaster</h1>
+        </div>
+    </header>
+    <main>
+        <section class="content">
+            <div id="selection">
+                <select id="subject">
+                    <option value="22">Geography</option>
+                    <option value="17">Science</option>
+                    <option value="27">Animals</option>
+                    <option value="21">Sports</option>
+                    <option value="26">Celebrities</option>
+                    <option value="15">Video Games</option>
+                    <option value="11">Film</option>
+                    <option value="12">Music</option>
+                    <option value="23">History</option>
+                    <option value="32">Cartoons</option>
+                </select>
+                <select id="ammount">
+                    <option value="5">5 questions</option>
+                    <option value="10">10 questions</option>
+                    <option value="20">20 questions</option>
+                    <option value="30">30 questions</option>
+                    <option value="40">40 questions</option>
+                    <option value="50">50 questions</option>
+                </select>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+                <button onclick="start()" class="select-btn" id="sbt1">Lets go!</button>
+            </div>
+            <div id="quiz">
+                <p class="question"><span id="question"></span></p><br>
+                <button onclick="guess(0)" class="answer-btn" id="abt1">1</button>
+                <button onclick="guess(1)" class="answer-btn" id="abt2">2</button>
+                <button onclick="guess(2)" class="answer-btn" id="abt3">3</button>
+                <button onclick="guess(3)" class="answer-btn" id="abt4">4</button>
+                <progress id="progress" max="50" value="0"></progress>
+            </div>
+            <div id="completed">
+                <p class="finish">Congratulations your result is:<span id="result"></span></p>
+                <br>
+                <progress id="score" max="50" value="0"></progress>
+                <button onclick="start()" class="select-btn" id="sbt1">Go again!</button>
+            </div>
+        </section>
+        <aside id="birdie" class="sidebar">
+            <img id="sideimg" src="static/bird.png" alt="birdie">
+            <br>
+            <p id="sidep1">Hey! I'm Birdy the bird here to help you get started making your own quiz!</p>
+            <br>
+            <br>
+            <p id="sidep2">1.Pick a subject <br>2. Choose how many questions <br>3. Pick a difficulty! </p>
+        </aside>
+        <aside id="sidebar2" class="sidebar2">
+        </aside>
+    </main>
+    <footer class="footer">
+        <p>©2019 <a href="https://github.com/wuxxerno">Source code and other cool projects</a></p>
+    </footer>
+</body>
+</html>

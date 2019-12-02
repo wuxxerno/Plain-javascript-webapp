@@ -1,0 +1,294 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background-color: #4c4c67;
+	text-align: center;
+	max-height: 100vh;
+}
+
+h1 {
+	color: WHITE;
+	font-family: 'Aldrich';
+	font-size: 3vh;
+	display: inline;
+	padding: 1vh;
+}
+
+p {
+	color: WHITE;
+	font-family: 'Aldrich';
+	font-size: 2vh;
+	display: inline;
+	padding: 1vh;
+}
+
+progress[value] {
+	width: 65%;
+	margin: 1vh 0;
+	font-size: 3vh;
+	border-style: solid;
+	border-color: #191943;
+	border-width: 1vh;
+	height: 6vh;
+	cursor: pointer;
+	background: #191943;
+	font-family: 'Aldrich';
+	color: WHITE;
+	text-decoration: none;
+}
+
+header,
+footer {
+	background: #191943;
+	height: 6vh;
+}
+
+header,
+footer,
+article,
+nav,
+aside {
+	padding: 1vh;
+}
+
+span {
+	color: WHITE;
+	font-family: 'Aldrich';
+	font-size: 3vh;
+	display: inline;
+	padding: 1vh;
+}
+
+img {
+	max-width: 10vh;
+}
+
+main {
+	max-height: 100vh;
+}
+
+
+/*Display as flex in landscape to allow sidebars*/
+
+@media screen and (orientation: landscape) and (min-width:1000px) {
+	main {
+		display: flex;
+		min-height: 90vh;
+	}
+}
+
+footer>p {
+	font-size: 1.5vh;
+}
+
+footer>p>a {
+	color: #d56c2c;
+}
+
+.header>#logo {
+	float: left;
+	display: inline;
+}
+
+#title {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#title>h1 {
+	display: inline;
+	color: WHITE;
+	font-family: 'Aldrich';
+	font-size: 3vh;
+}
+
+.sidebar2>img {
+	max-width: 25vh;
+}
+
+#completed {
+	margin-top: 10vh;
+	padding: 1vh;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	display: none;
+}
+
+#question {
+	display: inline-block;
+	padding-bottom: 1vh;
+	min-height: 20vh;
+}
+
+#quiz {
+	margin-top: 10vh;
+	padding: 1vh;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	display: none;
+}
+
+.question {
+	text-align: center;
+	color: WHITE;
+	font-family: 'Aldrich';
+	flex-basis: 100%;
+	font-size: 3vh;
+	margin-bottom: 5vh;
+}
+
+.question span {
+	display: inline-block;
+}
+
+.answer-btn {
+	margin: 1vh 0;
+	font-size: 3vh;
+	padding: 1vh;
+	cursor: pointer;
+	background: #191943;
+	font-family: 'Aldrich';
+	color: WHITE;
+	text-decoration: none;
+	border: none;
+}
+
+.select-btn {
+	margin: 1vh 0;
+	font-size: 3vh;
+	padding: 1vh;
+	cursor: pointer;
+	background: #d56c2c;
+	font-family: 'Aldrich';
+	color: WHITE;
+	text-decoration: none;
+	border: none;
+}
+
+.sidebar2 {
+	flex: 0 0 20vw;
+	margin: 1vh;
+}
+
+.content {
+	flex: 1;
+}
+
+.sidebar2 {
+	order: -1;
+}
+
+.footer {}
+
+#selection {
+	margin-top: 10vh;
+	padding: 1vh;
+}
+
+#selection>select {
+	display: block;
+	margin: 1vh auto;
+	border: none;
+	background: #191943;
+	color: WHITE;
+	font-family: 'Aldrich';
+	padding: 1vh;
+	flex-basis: 100%;
+	font-size: 3vh;
+}
+
+
+/*Disable hover in landscape (for mobile)*/
+
+@media screen and (orientation: landscape) {
+	.answer-btn:hover {
+		background: #d56c2c;
+	}
+	.select-btn:hover {
+		background: GREEN;
+	}
+}
+
+
+/*Adjust width for landscape mode*/
+
+@media screen and (orientation: landscape) and (min-width:1000px) {
+	.sidebar {
+		margin-top: 10vh;
+		flex: 0 0 20vw;
+		padding-left: 7vh;
+		padding-right: 7vh;
+		min-width: 35vh;
+		display: block;
+	}
+	.sidebar>img {
+		max-width: 15vh;
+		margin: 1vh;
+	}
+	.sidebar2 {
+		flex: 0 0 20vw;
+		min-width: 35vh;
+		margin: 1vh;
+	}
+	.answer-btn {
+		width: 65%;
+	}
+	.select-btn {
+		width: 65%;
+	}
+	#selection>select {
+		width: 65%;
+	}
+	progress[value] {
+		width: 65%;
+	}
+}
+
+
+/*Adjust width for portrait mode*/
+
+@media screen and (orientation: portrait),
+(max-width:1000px) {
+	.sidebar {
+		flex: 0 0 20vw;
+		margin: 1vh;
+		max-width: 100%;
+		padding-left: 12vh;
+		padding-right: 12vh;
+		min-width: 50vh;
+	}
+	.sidebar>img {
+		max-width: 10vh;
+	}
+	.sidebar2 {
+		display: none;
+	}
+	#selection>select {
+		width: 100%;
+	}
+	.answer-btn {
+		width: 100%;
+	}
+	.select-btn {
+		width: 100%;
+	}
+	.footer {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+	#selection>select {
+		width: 100%;
+	}
+	progress[value] {
+		width: 100%;
+	}
+}
+

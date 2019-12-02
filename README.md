@@ -1,2 +1,1 @@
-# Plain-javascript-webapp
-Simple webapp that uses Open Trivia DB api to producea simple quiz game
+Try it live! https://wuxxerno.github.io/posts/quizmaster/index.html
